@@ -316,7 +316,7 @@ class T3(nn.Module):
         past = output.past_key_values
 
         # ---- Generation Loop using kv_cache ----
-        for i in tqdm(range(max_new_tokens), desc="Sampling", dynamic_ncols=True):
+        for i in range(max_new_tokens):
             logits = output.logits[:, -1, :]
 
             # CFG
