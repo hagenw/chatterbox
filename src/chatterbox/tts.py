@@ -265,4 +265,4 @@ class ChatterboxTTS:
                 speech_tokens=speech_tokens,
                 ref_dict=self.conds.gen,
             )
-        return wav
+        return wav.detach().cpu()

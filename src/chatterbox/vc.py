@@ -97,4 +97,4 @@ class ChatterboxVC:
                 speech_tokens=s3_tokens,
                 ref_dict=self.ref_dict,
             )
-        return wav
+        return wav.detach().cpu()
